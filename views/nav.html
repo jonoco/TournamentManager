@@ -1,0 +1,12 @@
+<section class"navigation">
+<div class="navbar">
+  <ul class="nav nav-pills">
+    <li class="branding"><a ng-href="#/">Fight Fighters</a></li>
+    <li ng-show="currentUser">
+      <a ng-href="#/events">Events <span ng-if="howManyEventss>0">({{howManyEvents}})</span></a></li>
+    <li class="pull-right" ng-hide="currentUser"><a ng-href="#/login">Login</a></li>
+    <li class="pull-right" ng-hide="currentUser"><a ng-href="#/register">Register</a></li>
+		<li class="pull-right" ng-show="currentUser"><a href="#" ng-click="logout()">Logout</a></li>
+  </ul>
+</div>
+</section>

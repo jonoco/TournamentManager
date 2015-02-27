@@ -1,0 +1,131 @@
+/*
+  Color pallete
+
+  dark - #4B536D
+  light accent - #D9D7E0
+
+*/
+
+/* Global styles */
+
+body {
+    background-color: #D9D7E0;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.error {
+  color: #D11404;
+}
+
+.ng-dirty.ng-invalid {
+  border-color: #D11404;
+}
+
+.ng-dirty.ng-valid {
+  border-color: #21D153;
+}
+
+/* Navigation */
+
+.navbar {
+  background-color: #909FD1;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.navbar a {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Helvetica", serif;
+}
+
+/* Welcome page */
+
+.welcome {
+  background-color: rgba(215, 215, 215, 0.8);
+}
+
+.welcome table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.welcome td {
+  padding: 50px;
+}
+
+/* Login page */
+
+.login {
+  background-color: #909FD1;
+  border-radius: 6px;
+}
+
+.login form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+}
+
+/* Events page */
+
+.display-events {
+  background-color: #dddddd;
+  border-radius: 6px;
+  border: 1px gray solid;
+}
+
+.display-events form {
+  padding-bottom: 10px; 
+}
+
+.event {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/* Check-in list page */
+
+.checkins-list {
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.userlist {
+  text-align: left;
+}
+
+/* Check-in page */
+
+.checkin {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+
+
+
+
+

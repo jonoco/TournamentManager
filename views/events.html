@@ -1,0 +1,46 @@
+<section>
+  <div class="container">
+    <div ng-hide="signedIn()" class="sorry">
+      <h1>Sorry</h1>
+      <p>Only registered users can create and manage events.</p>
+      <p>Please <a ng-href="#/register">Register</a> 
+        or <a ng-href="#/login">Login</a></p>
+    </div>
+
+    <div ng-show="signedIn()" class="display-events">
+      <h1>Add Event</h1>
+      <form class="formgroup addevent cf" name="myform" role="form"
+        ng-submit="addEvent()" novalidate>
+        <fieldset>
+          <input type="text" name="eventName" placeholder="Event Name"
+            ng-model="eventName" required>
+          <button type="submit" class="btn" 
+            ng-disabled="myform.$invalid">+</button>
+        </fieldset> 
+      </form>
+
+      <h1 ng-if="howManyEvents>0">Your events</h1>
+      <div class="event" ng-repeat="(key, event) in events">
+        <h2>{{event.name}}</h2>
+        <div class="button-group">
+          <a class="btn btn-default" 
+            ng-href="#/checkins/{{currentUser.regUser}}/{{key}}/checkinsList">
+            <span>View list of checked in users</span></a>
+
+          <a class="btn btn-default" 
+            ng-href="#/checkins/{{currentUser.regUser}}/{{key}}">
+            <span>Go to check-in URL</span></a>
+
+          <a class="btn btn-info" 
+            ng-href="#/event/{{currentUser.regUser}}/{{key}}">
+            <span>Change event settings</span></a>
+
+          <button class="btn btn-danger" 
+            confirmation-needed="Sure you want to delete the event?"
+            ng-click="deleteEvent(key)">
+            <span>Delete this event</span></button>
+        </div>
+      </div><!-- events List -->
+    </div><!-- Display events -->
+  </div>
+</section>

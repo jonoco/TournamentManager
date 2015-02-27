@@ -1,0 +1,34 @@
+<section>
+  <div class="container">
+    <div class="login">
+      <form name="loginForm" role="form" 
+        ng-submit="login()" novalidate>
+        <fieldset class="form-group">
+          <h1>Hi there!</h1>
+          <p>Log-in to access the awesomeness!</p>
+        </fieldset>
+        <fieldset class="form-group">
+          <p class="error formerror" ng-show="message">{{ message }}</p>
+
+          <input type="email" class="form-control" name="email" placeholder="Email"
+            ng-model="user.email" required>
+          <p class="error validationerror"
+            ng-show="loginForm.email.$invalid && loginForm.email.$touched">
+            Must be a valid email</p>
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="password" class="form-control" name="password" placeholder="Password"
+            ng-model="user.password" required>
+          <p class="error validationerror"
+            ng-show="loginForm.password.$invalid && loginForm.password.$touched">
+            Password is required</p>
+        </fieldset>
+        <fieldset class="form-group">
+          <button type="submit" class="btn"
+            ng-disabled="loginForm.$invalid">Login</button>
+          <p>or <a href="#/register">register</a></p>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>

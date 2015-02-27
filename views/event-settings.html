@@ -1,0 +1,42 @@
+<section>
+	<div class="container">
+	
+	<form class="division-form" name="myform" role="form" novalidate
+		ng-submit="addDivision()">
+		
+		<h3>Create division</h3>
+
+		<div class="form-group">
+			<label class="pull-left">Division Name:</label>
+      <input class="form-control" type="text" name="division" placeholder="Division Name"
+        ng-model="event.division" required>
+      <p class="error" ng-show="myform.division.$invalid && myform.division.$touched">
+        Division Name is required</p>  
+		</div>
+		<div class="form-group">
+			<label class="pull-left">Weight Range:</label>
+      <input class="form-control" type="text" name="weightmin" min="1" max="500" 
+      placeholder="Minimum Weight" ng-model="event.weightMin" required>
+      <input class="form-control" type="text" name="weightmax" min="1" max="500" 
+      placeholder="Maximum Weight" ng-model="event.weightMax" required> 
+		</div>
+		<div class="form-group">
+			<label class="pull-left">Age Range:</label>
+      <input class="form-control" type="text" name="ageMin" min="1" max="100" 
+      placeholder="Minimum Age" ng-model="event.ageMin" required>
+      <input class="form-control" type="text" name="ageMax" min="1" max="100" 
+      placeholder="Maximum Age" ng-model="event.ageMax" required> 
+		</div>
+		<div class="form-group">
+			<label class="pull-left">Rank:</label>
+      <input class="form-control" type="text" name="rank" placeholder="Rank"
+        ng-model="event.rank" required>
+      <p class="error" ng-show="myform.rank.$invalid && myform.rank.$touched">
+        Rank is required</p>  
+		</div>
+		<button type="submit" class="btn btn-default"
+          ng-disabled="myform.$invalid">Create Division</button>
+	</form>
+
+	</div>
+</section>
